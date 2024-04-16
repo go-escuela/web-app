@@ -2,13 +2,14 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { Metadata } from "next";
+import { Card } from "flowbite-react";
 
 export const metadata: Metadata = {
-  title: "Next.js SignIn Page | TailAdmin - Next.js Dashboard Template",
-  description: "This is Next.js Signin Page TailAdmin Dashboard Template",
+  title: "Sign in page",
+  description: "",
 };
 
-const SignIn: React.FC = () => {
+const Login: React.FC = () => {
   return (
     <div className="dark:bg-boxdark-2 dark:text-bodydark">
       <div className="overflow-hidden px-4 dark:bg-boxdark-2 sm:px-8">
@@ -32,7 +33,7 @@ const SignIn: React.FC = () => {
                     height={32}
                   />
                 </Link>
-                <div className="rounded-xl bg-white p-4 shadow-14 dark:bg-boxdark lg:p-7.5 xl:p-12.5">
+                <Card className="rounded-xl bg-white p-4 shadow-14 dark:bg-boxdark lg:p-7.5 xl:p-12.5">
                   <h1 className="mb-2.5 text-3xl font-black leading-[48px] text-black dark:text-white">
                     Ingresar
                   </h1>
@@ -107,18 +108,18 @@ const SignIn: React.FC = () => {
                       <input
                         type="submit"
                         value="Sign In"
-                        className="w-full cursor-pointer rounded-lg border border-primary bg-primary p-4 text-white transition hover:bg-opacity-90"
+                        className="w-full cursor-pointer rounded-lg border border-primary bg-primary p-4 text-white transition"
                       />
                     </div>
                   </form>
-                </div>
+                </Card>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </div >
   );
 };
 
-export default SignIn;
+export default Login;
