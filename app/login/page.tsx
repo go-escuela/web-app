@@ -1,5 +1,4 @@
 import React from "react";
-import Link from "next/link";
 import Image from "next/image";
 import { Metadata } from "next";
 import { Card } from "flowbite-react";
@@ -17,22 +16,13 @@ const Login: React.FC = () => {
           <div className="no-scrollbar overflow-y-auto py-20">
             <div className="mx-auto w-full max-w-[480px]">
               <div className="text-center">
-                <Link className="mb-5.5 inline-block" href="/">
-                  <Image
-                    className="hidden dark:block"
-                    src={"/images/logo/logo.svg"}
-                    alt="Logo"
-                    width={176}
-                    height={32}
-                  />
-                  <Image
-                    className="dark:hidden"
-                    src={"/images/logo/logo-dark.svg"}
-                    alt="Logo"
-                    width={176}
-                    height={32}
-                  />
-                </Link>
+                <Image
+                  className="mb-5.5 inline-block dark:hidden"
+                  src={"/images/logo/logo-2.png"}
+                  alt="Logo"
+                  width={176}
+                  height={32}
+                />
                 <Card className="rounded-xl bg-white p-4 shadow-14 dark:bg-boxdark lg:p-7.5 xl:p-12.5">
                   <h1 className="mb-2.5 text-3xl font-black leading-[48px] text-black dark:text-white">
                     Ingresar
