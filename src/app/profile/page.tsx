@@ -21,7 +21,7 @@ const Profile = () => {
             <Image
               src={"/images/cover/cover-01.png"}
               alt="profile cover"
-              className="h-full w-full rounded-tl-sm rounded-tr-sm object-cover object-center"
+              className="size-full rounded-t-sm object-cover object-center"
               width={970}
               height={260}
               style={{
@@ -32,7 +32,7 @@ const Profile = () => {
             <div className="absolute bottom-1 right-1 z-10 xsm:bottom-4 xsm:right-4">
               <label
                 htmlFor="cover"
-                className="flex cursor-pointer items-center justify-center gap-2 rounded bg-primary px-2 py-1 text-sm font-medium text-white hover:bg-opacity-80 xsm:px-4"
+                className="flex cursor-pointer items-center justify-center gap-2 rounded bg-primary px-2 py-1 text-sm font-medium text-white hover:opacity-80 xsm:px-4"
               >
                 <input
                   type="file"
@@ -82,7 +82,7 @@ const Profile = () => {
                 />
                 <label
                   htmlFor="profile"
-                  className="absolute bottom-0 right-0 flex h-8.5 w-8.5 cursor-pointer items-center justify-center rounded-full bg-primary text-white hover:bg-opacity-90 sm:bottom-2 sm:right-2"
+                  className="absolute bottom-0 right-0 flex size-8.5 cursor-pointer items-center justify-center rounded-full bg-primary text-white hover:opacity-90 sm:bottom-2 sm:right-2"
                 >
                   <svg
                     className="fill-current"
