@@ -1,14 +1,13 @@
-import flowbite from "flowbite/plugin";
 import type { Config } from "tailwindcss";
 import defaultTheme from "tailwindcss/defaultTheme";
 
 const config: Config = {
   content: [
-    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./app/**/*.{js,ts,jsx,tsx,mdx}",
-    "node_modules/flowbite-react/lib/esm/**/*.js",
+    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
+  darkMode: "class",
   theme: {
     fontFamily: {
       satoshi: ["Satoshi", "sans-serif"],
@@ -331,6 +330,6 @@ const config: Config = {
       },
     },
   },
-  plugins: [flowbite],
+  plugins: [],
 };
 export default config;
