@@ -1,14 +1,13 @@
-import flowbite from "flowbite/plugin";
 import type { Config } from "tailwindcss";
 import defaultTheme from "tailwindcss/defaultTheme";
 
 const config: Config = {
   content: [
-    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./app/**/*.{js,ts,jsx,tsx,mdx}",
-    "node_modules/flowbite-react/lib/esm/**/*.js",
+    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
+  darkMode: "class",
   theme: {
     fontFamily: {
       satoshi: ["Satoshi", "sans-serif"],
@@ -24,15 +23,15 @@ const config: Config = {
         current: "currentColor",
         transparent: "transparent",
         white: "#FFFFFF",
-        black: "#000000",
-        red: "#D7231D",
+        black: "#1C2434",
+        red: "#FB5454",
         "black-2": "#010101",
         body: "#64748B",
         bodydark: "#AEB7C0",
         bodydark1: "#DEE4EE",
         bodydark2: "#8A99AF",
         primary: "#3C50E0",
-        secondary: "#71C0C4",
+        secondary: "#80CAEE",
         stroke: "#E2E8F0",
         gray: "#EFF4FB",
         graydark: "#333A48",
@@ -331,6 +330,6 @@ const config: Config = {
       },
     },
   },
-  plugins: [flowbite],
+  plugins: [],
 };
 export default config;
