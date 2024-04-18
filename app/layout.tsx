@@ -1,7 +1,5 @@
 "use client";
-import "jsvectormap/dist/css/jsvectormap.css";
 import "flatpickr/dist/flatpickr.min.css";
-import "@/app/css/satoshi.css";
 import "@/app/css/style.css";
 import React, { useEffect, useState } from "react";
 import Loader from "@/app/components/common/Loader";
@@ -11,7 +9,6 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const [sidebarOpen, setSidebarOpen] = useState(false);
   const [loading, setLoading] = useState<boolean>(true);
 
   // const pathname = usePathname();
