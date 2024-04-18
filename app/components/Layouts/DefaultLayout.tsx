@@ -6,7 +6,7 @@ import Header from "@/app/components/Header";
 export default function DefaultLayout({
   children,
 }: {
-  children: React.ReactNode;
+  children: ReactNode;
 }) {
   const [sidebarOpen, setSidebarOpen] = useState(false);
   return (
