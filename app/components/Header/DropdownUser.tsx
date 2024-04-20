@@ -1,6 +1,5 @@
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
-import Image from "next/image";
 import { AdjustmentsHorizontalIcon, ArrowLeftEndOnRectangleIcon } from '@heroicons/react/24/solid'
 
 
@@ -50,17 +49,10 @@ const DropdownUser = () => {
           </span>
         </span>
 
-        <span className="size-12 rounded-full">
-          <Image
-            width={112}
-            height={112}
-            src={"/images/user/user-01.png"}
-            style={{
-              width: "auto",
-              height: "auto",
-            }}
-            alt="User"
-          />
+        <span className="size-12 rounded-full bg-gray">
+          <div className="relative inline-flex size-12 items-center justify-center overflow-hidden rounded-full">
+            <span className="font-medium">JL</span>
+          </div>
         </span>
 
         <svg
