@@ -1,12 +1,25 @@
-import { Metadata } from "next";
+"use client"
 
-export const metadata: Metadata = {
-  title: "Go-escuela | course",
-  description: "",
-};
+import { Tabs } from "flowbite-react";
+import { HiAdjustments, HiClipboardList, HiUserCircle } from "react-icons/hi";
+import { MdDashboard } from "react-icons/md";
 
 export default function Page() {
   return (
-    <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis numquam aliquid expedita, ad provident optio beatae adipisci quas, molestiae magnam reprehenderit soluta? Reiciendis, asperiores pariatur. Nemo pariatur esse velit quod?</span>
+    <div className="rounded-sm border border-stroke bg-white p-7.5 shadow-default dark:border-strokedark dark:bg-boxdark">
+      <div className="mb-6 flex flex-wrap gap-5 border-stroke dark:border-strokedark sm:gap-10">
+        <Tabs aria-label="Default tabs" style="underline">
+          <Tabs.Item active title="Actividades de clase" icon={HiUserCircle}>
+            Actividades en clase
+          </Tabs.Item>
+          <Tabs.Item title="Personas" icon={MdDashboard}>
+            Personas
+          </Tabs.Item>
+          <Tabs.Item title="Calificaciones" icon={HiAdjustments}>
+            Calificaciones
+          </Tabs.Item>
+        </Tabs>
+      </div>
+    </div>
   );
 }
