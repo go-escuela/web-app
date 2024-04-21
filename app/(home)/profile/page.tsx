@@ -9,7 +9,6 @@ export const metadata: Metadata = {
 const Profile = () => {
   return (
     <div className="mx-auto max-w-270">
-
       <div className="grid grid-cols-5 gap-8">
         <div className="col-span-12 xl:col-span-12">
           <div className="rounded-sm border border-stroke bg-white shadow-default dark:border-strokedark dark:bg-boxdark">
