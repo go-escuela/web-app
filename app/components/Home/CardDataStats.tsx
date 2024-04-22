@@ -26,7 +26,6 @@ const CardDataStats: React.FC<CardDataStatsProps> = ({
           </div>
         </div>
       </div>
-
     </Link>
   );
 };
