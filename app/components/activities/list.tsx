@@ -3,6 +3,8 @@
 import { Accordion } from "flowbite-react";
 import { Button } from "flowbite-react";
 import { HiOutlinePlusSm } from "react-icons/hi";
+import { Badge } from "flowbite-react";
+import { HiCheck, HiClock } from "react-icons/hi";
 
 export function ActivityList() {
   return (
@@ -19,19 +21,14 @@ export function ActivityList() {
           <Accordion.Title>General</Accordion.Title>
           <Accordion.Content>
             <p className="mb-2 text-gray-500 dark:text-gray-400">
-              Flowbite is an open-source library of interactive components built on top of Tailwind CSS including buttons,
-              dropdowns, modals, navbars, and more.
+              No hay actividades
             </p>
-            <p className="text-gray-500 dark:text-gray-400">
-              Check out this guide to learn how to&nbsp;
-              <a
-                href="https://flowbite.com/docs/getting-started/introduction/"
-                className="text-cyan-600 hover:underline dark:text-cyan-500"
-              >
-                get started&nbsp;
-              </a>
-              and start developing websites even faster with components on top of Tailwind CSS.
-            </p>
+            <div className="p-4">
+              <Button fullSized size={"sm"} gradientDuoTone={"cyanToBlue"} >
+                <HiOutlinePlusSm className="ml-2 h-5 w-5" />
+                Agregar Actividad o recurso
+              </Button>
+            </div>
           </Accordion.Content>
         </Accordion.Panel>
         <Accordion.Panel>
@@ -146,6 +143,6 @@ export function ActivityList() {
           </Accordion.Content>
         </Accordion.Panel>
       </Accordion>
-    </div>
+    </div >
   );
 }
