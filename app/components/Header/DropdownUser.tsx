@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { AdjustmentsHorizontalIcon, ArrowLeftEndOnRectangleIcon } from '@heroicons/react/24/solid'
+import { Avatar } from "flowbite-react";
 
 
 const DropdownUser = () => {
@@ -49,12 +50,9 @@ const DropdownUser = () => {
           </span>
         </span>
 
-        <span className="size-12 rounded-full bg-gray">
-          <div className="relative inline-flex size-12 items-center justify-center overflow-hidden rounded-full">
-            <span className="font-medium">JL</span>
-          </div>
-        </span>
-
+        <div className="flex flex-wrap gap-2 bg-gray rounded-full">
+          <Avatar placeholderInitials="RR" rounded />
+        </div>
         <svg
           className="hidden fill-current sm:block"
           width="12"
