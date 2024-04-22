@@ -12,9 +12,6 @@ export default function Page() {
       <div className="mb-6 gap-5 border-stroke dark:border-strokedark sm:gap-10">
         <Tabs aria-label="Default tabs" style="underline" className="bg-red-500 hover:bg-red-600" theme={customTabTheme}>
           <Tabs.Item active title="Actividades de clase" icon={HiUserCircle}>
-
-            Actividades en clase
-
             <List />
 
           </Tabs.Item>
