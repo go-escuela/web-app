@@ -4,9 +4,9 @@ import { Accordion } from "flowbite-react";
 import { Button } from "flowbite-react";
 import { HiOutlinePlusSm } from "react-icons/hi";
 
-export function List() {
+export function ActivityList() {
   return (
-    <div className="mx-auto max-w-242.5">
+    <div className="mx-auto max-w-2xl">
       <div className="flex flex-wrap gap-2 pb-4">
         <Button>
           <HiOutlinePlusSm className="ml-2 h-5 w-5" />
@@ -14,7 +14,7 @@ export function List() {
         </Button>
       </div>
 
-      <Accordion>
+      <Accordion flush={true} arrowIcon={HiOutlinePlusSm}>
         <Accordion.Panel>
           <Accordion.Title>General</Accordion.Title>
           <Accordion.Content>
