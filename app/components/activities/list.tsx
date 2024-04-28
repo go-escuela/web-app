@@ -10,14 +10,14 @@ import Link from "next/link";
 export function ActivityList() {
   return (
     <div className="mx-auto max-w-2xl">
-      <div className="flex flex-wrap gap-2 pb-4">
-        <Button>
-          <HiOutlinePlusSm className="ml-2 h-5 w-5" />
+      <div className="flex flex-wrap items-start gap-2">
+        <Button size="xs">
+          <HiOutlinePlusSm className="ml-2 h-4 w-4" />
           Crear Tópico
         </Button>
       </div>
 
-      <Accordion flush={true} arrowIcon={HiOutlinePlusSm}>
+      <Accordion flush={true} arrowIcon={HiOutlinePlusSm} collapseAll>
         <Accordion.Panel>
           <Accordion.Title>General</Accordion.Title>
           <Accordion.Content>
