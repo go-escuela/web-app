@@ -2,6 +2,9 @@
 import React from "react";
 import CardDataStats from "./CardDataStats";
 import Image from "next/image";
+import QuizForm from "../quiz/create/newQuiz";
+import AddChoiceForm from "../quiz/questions/uniqueChoice/newChoice";
+import UsersList from "../users/users";
 
 const Home: React.FC = () => {
   return (
