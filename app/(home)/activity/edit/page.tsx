@@ -1,4 +1,4 @@
-import EditTask from "@/app/components/activities/editActivity";
+import EditTask from "@/app/components/courses/activities/editActivity";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {

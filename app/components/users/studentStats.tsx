@@ -1,31 +1,36 @@
 "use client";
 
-import { Table, Avatar } from "flowbite-react";
+import { Table } from "flowbite-react";
 import React, { useState } from "react";
-import { faker } from "@faker-js/faker";
 
-const UsersList = () => {
-  const [users] = useState([
+const StudentList = () => {
+  const [students] = useState([
     {
-      photo: faker.image.avatar(),
+      photo: "https://via.placeholder.com/50",
       name: "John Doe",
-      userType: "Admin",
       id: "12345",
       email: "johndoe@example.com",
+      grade: "A",
+      notaAcomulada: "95",
+      progress: "80%",
     },
     {
-      photo: faker.image.avatar(),
+      photo: "https://via.placeholder.com/50",
       name: "Jane Smith",
-      userType: "Estudiante",
       id: "67890",
       email: "janesmith@example.com",
+      grade: "B",
+      notaAcomulada: "85",
+      progress: "70%",
     },
     {
-      photo: faker.image.avatar(),
+      photo: "https://via.placeholder.com/50",
       name: "Alice Johnson",
-      userType: "Profesor",
       id: "54321",
       email: "alicejohnson@example.com",
+      grade: "A",
+      notaAcomulada: "90",
+      progress: "85%",
     },
   ]);
 
@@ -33,32 +38,27 @@ const UsersList = () => {
     <div className="overflow-x-auto">
       <Table>
         <Table.Head>
-          <Table.HeadCell>Foto</Table.HeadCell>
           <Table.HeadCell>Nombre</Table.HeadCell>
-          <Table.HeadCell>Tipo Usuario</Table.HeadCell>
+          <Table.HeadCell>Grado</Table.HeadCell>
           <Table.HeadCell>Id</Table.HeadCell>
           <Table.HeadCell>Correo</Table.HeadCell>
+          <Table.HeadCell>Progreso</Table.HeadCell>
+          <Table.HeadCell>Nota Acomulada</Table.HeadCell>
         </Table.Head>
         <Table.Body className="divide-y">
-          {users.map((user, index) => (
+          {students.map((student, index) => (
             <Table.Row
               key={index}
               className="dark:border-gray-700 dark:bg-gray-800 bg-white"
             >
-              <Table.Cell>
-                <Avatar
-                  img={user.photo}
-                  alt={`${user.name} image`}
-                  rounded
-                  size="sm"
-                />
-              </Table.Cell>
               <Table.Cell className="text-gray-900 whitespace-nowrap font-medium dark:text-white">
-                {user.name}
+                {student.name}
               </Table.Cell>
-              <Table.Cell>{user.userType}</Table.Cell>
-              <Table.Cell>{user.id}</Table.Cell>
-              <Table.Cell>{user.email}</Table.Cell>
+              <Table.Cell>{student.grade}</Table.Cell>
+              <Table.Cell>{student.id}</Table.Cell>
+              <Table.Cell>{student.email}</Table.Cell>
+              <Table.Cell>{student.progress}</Table.Cell>
+              <Table.Cell>{student.notaAcomulada}</Table.Cell>
             </Table.Row>
           ))}
         </Table.Body>
@@ -67,4 +67,4 @@ const UsersList = () => {
   );
 };
 
-export default UsersList;
+export default StudentList;

@@ -6,6 +6,7 @@ import { MdDashboard } from "react-icons/md";
 import { customTabTheme } from "@/app/lib/custom/tabs";
 import { ActivityList } from "@/app/components/courses/list";
 import UsersList from "@/app/components/users/users";
+import StudentList from "@/app/components/users/studentStats";
 
 export default function Page() {
   return (
@@ -21,11 +22,10 @@ export default function Page() {
             <ActivityList />
           </Tabs.Item>
           <Tabs.Item title="Personas" icon={MdDashboard}>
-            Personas
             <UsersList />
           </Tabs.Item>
           <Tabs.Item title="Calificaciones" icon={HiAdjustments}>
-            Calificaciones
+            <StudentList />
           </Tabs.Item>
         </Tabs>
       </div>

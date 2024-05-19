@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Label, TextInput, Textarea, Button, Modal } from "flowbite-react";
 
 const TopicForm = () => {
-  //Vars on form
+  // Vars on form
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
   const [openModal, setOpenModal] = useState(false);
@@ -17,12 +17,20 @@ const TopicForm = () => {
   return (
     <>
       <Button color="blue" onClick={() => setOpenModal(true)}>
-        Agrega Topico
+        Agregar Topico
       </Button>
-      <Modal dismissible show={openModal} onClose={() => setOpenModal(false)}>
+      <Modal
+        show={openModal}
+        size="md"
+        popup={true}
+        onClose={() => setOpenModal(false)}
+        className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-75"
+      >
+        <Modal.Header />
         <Modal.Body>
           <form onSubmit={handleSubmit} className="flex flex-col gap-4">
             <div>
+              <Label htmlFor="title" value="Título del tema" />
               <TextInput
                 id="title"
                 type="text"
@@ -30,6 +38,16 @@ const TopicForm = () => {
                 required={true}
                 value={title}
                 onChange={(e) => setTitle(e.target.value)}
+              />
+            </div>
+            <div>
+              <Label htmlFor="description" value="Descripción del tema" />
+              <Textarea
+                id="description"
+                placeholder="Ingresa la descripción del tema"
+                required={true}
+                value={description}
+                onChange={(e) => setDescription(e.target.value)}
               />
             </div>
             <Button type="submit">Crear tema</Button>

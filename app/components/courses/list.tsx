@@ -9,8 +9,8 @@ import {
 } from "@heroicons/react/24/solid";
 import { List } from "flowbite-react";
 import Link from "next/link";
-import TaskForm from "../activities/newActivity";
-import TopicForm from "../topic/newTopic";
+import TopicForm from "./topic/newTopic";
+import NewActivityOrQuizModal from "./newActivityOrQuiz";
 
 export function ActivityList() {
   return (
@@ -27,7 +27,7 @@ export function ActivityList() {
               No hay actividades
             </p>
             <div className="p-4">
-              <Link href="/activities/new" passHref>
+              <Link href="/activity/new" passHref>
                 <Button className="w-full bg-[#06b6d4]" type="submit">
                   Crear Actividad
                 </Button>
@@ -67,10 +67,7 @@ export function ActivityList() {
             </List>
 
             <div className="p-4">
-              <Button fullSized size={"sm"} gradientDuoTone={"cyanToBlue"}>
-                <HiOutlinePlusSm className="ml-2 h-5 w-5" />
-                Agregar Actividad o recurso
-              </Button>
+              <NewActivityOrQuizModal />
             </div>
           </Accordion.Content>
         </Accordion.Panel>

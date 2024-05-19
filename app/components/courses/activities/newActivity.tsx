@@ -3,7 +3,7 @@
 import { Label, TextInput, Textarea, Button, FileInput } from "flowbite-react";
 import React, { useState } from "react";
 
-const EditTask = () => {
+const TaskForm = () => {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
   const [dueDate, setDueDate] = useState("");
@@ -15,8 +15,11 @@ const EditTask = () => {
   };
 
   return (
-    <>
-      <form onSubmit={handleSubmit} className="w-3/4% flex flex-col gap-4">
+    <div className="bg-gray-100 flex min-h-screen items-start justify-center ">
+      <form
+        onSubmit={handleSubmit}
+        className="flex flex-col gap-4 rounded-lg bg-white p-6 shadow-lg lg:w-2/4"
+      >
         <div>
           <div className="mb-2 block">
             <Label htmlFor="title" value="Título de la Actividad" />
@@ -51,7 +54,7 @@ const EditTask = () => {
         </div>
         <div className="mb-4">
           <div className="mb-2 block">
-            <Label htmlFor="description" value="Fecha de Entrega" />
+            <Label htmlFor="dueDate" value="Fecha de Entrega" />
           </div>
           <TextInput
             id="dueDate"
@@ -61,10 +64,10 @@ const EditTask = () => {
             onChange={(e) => setDueDate(e.target.value)}
           />
         </div>
-        <Button type="submit">Editar Actividad</Button>
+        <Button type="submit">Crear Actividad</Button>
       </form>
-    </>
+    </div>
   );
 };
 
-export default EditTask;
+export default TaskForm;

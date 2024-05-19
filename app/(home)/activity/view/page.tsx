@@ -1,4 +1,4 @@
-import TaskForm from "@/app/components/activities/newActivity";
+import ActivityView from "@/app/components/courses/activities/activityView";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -7,5 +7,5 @@ export const metadata: Metadata = {
 };
 
 export default function Task() {
-  return <TaskForm />;
+  return <ActivityView />;
 }

@@ -10,33 +10,32 @@ const OpenQuestionForm = () => {
 
   return (
     <>
-      <div>
-        <div className="mb-2 block">
-          <Label htmlFor="ask" value="Ingresa una Pregunta" />
+      <div className="">
+        <div>
+          <h3 className="text-gray-800 mb-4 text-xl font-bold">
+            Pregunta Abierta
+          </h3>
+          <div className="mb-2 block">
+            <Label htmlFor="ask" value="Ingresa una Pregunta" />
+          </div>
+          <Textarea
+            id="ask"
+            placeholder="Escribe una Pregunta"
+            required={true}
+            rows={4}
+          />
         </div>
-        <Textarea
-          id="ask"
-          placeholder="Escribe una Pregunta"
-          required={true}
-          rows={4}
-        />
-      </div>
-      <div>
-        <div className="mb-2 block">
-          <Label htmlFor="file-upload" value="Upload file" />
+        <div>
+          <div className="mb-2 block">
+            <Label htmlFor="ask" value="Ingresa una Respuesta" />
+          </div>
+          <Textarea
+            id="ask"
+            placeholder="Escribe una Respuesta"
+            required={true}
+            rows={4}
+          />
         </div>
-        <FileInput id="file-upload" />
-      </div>
-      <div>
-        <div className="mb-2 block">
-          <Label htmlFor="ask" value="Ingresa una Respuesta" />
-        </div>
-        <Textarea
-          id="ask"
-          placeholder="Escribe una Respuesta"
-          required={true}
-          rows={4}
-        />
       </div>
     </>
   );

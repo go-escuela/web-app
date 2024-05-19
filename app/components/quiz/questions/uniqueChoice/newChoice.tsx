@@ -1,25 +1,43 @@
 import React, { useState } from "react";
-import { Label, TextInput, Button } from "flowbite-react";
+import { TextInput } from "flowbite-react";
 
 const NewChoiceForm = () => {
-  //Vars on form
+  const [choices, setChoices] = useState([""]);
 
-  const handleSubmit = (event: { preventDefault: () => void }) => {
+  const handleChange = (
+    index: number,
+    event: React.ChangeEvent<HTMLInputElement>,
+  ) => {
+    const newChoices = [...choices];
+    newChoices[index] = event.target.value;
+    setChoices(newChoices);
+
+    if (event.target.value.length === 1 && index === choices.length - 1) {
+      setChoices([...newChoices, ""]);
+    }
+  };
+
+  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
+    console.log(choices.filter((choice) => choice));
   };
 
   return (
-    <>
-      <div>
-        <TextInput
-          id="ans"
-          type="text"
-          placeholder="Escribe Opción de Respuesta"
-          required={true}
-        />
-      </div>
-      <Button type="submit">Agregar Opción de Respuesta</Button>
-    </>
+    <form onSubmit={handleSubmit}>
+      {choices.map((choice, index) => (
+        <div key={index}>
+          <TextInput
+            className="pt-1"
+            id={`ans-${index}`}
+            type="text"
+            placeholder="Escribe Opción de Respuesta"
+            value={choice}
+            onChange={(event) => handleChange(index, event)}
+            required={true}
+          />
+        </div>
+      ))}
+    </form>
   );
 };
 
