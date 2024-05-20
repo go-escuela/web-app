@@ -1,10 +1,9 @@
-"use client";
-
 import React, { useState } from "react";
 import { Label, Textarea, FileInput } from "flowbite-react";
-import NewChoiceForm from "../uniqueChoice/newChoice";
+import NewChoiceForm from "../multipleChoice/newChoice";
+import NewUniqueChoiceForm from "./newChoice";
 
-const MultipleChoiceQuiestionForm = () => {
+const ChoiceQuiestionForm = () => {
   //Vars on form
 
   const handleSubmit = (event: { preventDefault: () => void }) => {
@@ -14,8 +13,8 @@ const MultipleChoiceQuiestionForm = () => {
   return (
     <>
       <div className="">
-        <h3 className="text-gray-800 mb-4 text-xl font-bold">
-          Pregunta de Selección Multiple
+        <h3 className="text-gray-800 mb-4 text-base font-bold">
+          Pregunta de Selección Unica
         </h3>
         <form onSubmit={handleSubmit} className="flex flex-col gap-4">
           <div>
@@ -29,11 +28,11 @@ const MultipleChoiceQuiestionForm = () => {
               rows={4}
             />
           </div>
-          <NewChoiceForm />
+          <NewUniqueChoiceForm />
         </form>
       </div>
     </>
   );
 };
 
-export default MultipleChoiceQuiestionForm;
+export default ChoiceQuiestionForm;

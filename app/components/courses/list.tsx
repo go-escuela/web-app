@@ -1,7 +1,6 @@
 "use client";
 
 import { Accordion } from "flowbite-react";
-import { Button } from "flowbite-react";
 import { HiOutlinePlusSm } from "react-icons/hi";
 import {
   QuestionMarkCircleIcon,
@@ -27,11 +26,9 @@ export function ActivityList() {
               No hay actividades
             </p>
             <div className="p-4">
-              <Link href="/activity/new" passHref>
-                <Button className="w-full bg-[#06b6d4]" type="submit">
-                  Crear Actividad
-                </Button>
-              </Link>
+              <div className="p-4">
+                <NewActivityOrQuizModal />
+              </div>
             </div>
           </Accordion.Content>
         </Accordion.Panel>
@@ -40,7 +37,7 @@ export function ActivityList() {
           <Accordion.Content>
             <List unstyled className="divide-gray-200 dark:divide-gray-700">
               <List.Item className="border-b pb-3 sm:pb-4">
-                <Link className="text-xs" href="/">
+                <Link className="text-xs" href="activity/view">
                   <div className="flex items-center space-x-4 rtl:space-x-reverse">
                     <BookmarkSquareIcon className="size-4 text-blue-500" />
                     <div className="min-w-0 flex-1">los seres vivos</div>
@@ -51,7 +48,7 @@ export function ActivityList() {
                 </Link>
               </List.Item>
               <List.Item className="border-b pb-3 sm:pb-4">
-                <Link className="text-xs" href="/">
+                <Link className="text-xs" href="quiz/question">
                   <div className="flex items-center space-x-4 rtl:space-x-reverse">
                     <QuestionMarkCircleIcon className="size-4 text-blue-500" />
                     <div className="min-w-0 flex-1">

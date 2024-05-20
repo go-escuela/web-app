@@ -2,12 +2,12 @@
 
 import { Label, TextInput, Textarea, Button, FileInput } from "flowbite-react";
 import React, { useState } from "react";
+import { Datepicker } from "flowbite-react";
 
 const TaskForm = () => {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
   const [dueDate, setDueDate] = useState("");
-  const [openModal, setOpenModal] = useState(false);
 
   const handleSubmit = (event: { preventDefault: () => void }) => {
     event.preventDefault();
@@ -56,13 +56,7 @@ const TaskForm = () => {
           <div className="mb-2 block">
             <Label htmlFor="dueDate" value="Fecha de Entrega" />
           </div>
-          <TextInput
-            id="dueDate"
-            type="date"
-            required={true}
-            value={dueDate}
-            onChange={(e) => setDueDate(e.target.value)}
-          />
+          <Datepicker autoHide={false} />
         </div>
         <Button type="submit">Crear Actividad</Button>
       </form>

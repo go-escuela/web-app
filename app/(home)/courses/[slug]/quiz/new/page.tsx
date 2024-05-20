@@ -1,4 +1,4 @@
-import QuizForm from "@/app/components/quiz/create/newQuiz";
+import QuizForm from "@/app/components/courses/quiz/create/newQuiz";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {

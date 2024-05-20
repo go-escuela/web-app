@@ -15,7 +15,7 @@ const TrueFalseForm = () => {
     <>
       <div className="">
         <div>
-          <h3 className="text-gray-800 mb-4 text-xl font-bold">
+          <h3 className="text-gray-800 mb-4 text-base font-bold">
             Pregunta de Bolean
           </h3>
           <div className="mb-2 block">

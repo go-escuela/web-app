@@ -1,28 +1,39 @@
 "use client";
 import React, { useState, ReactNode } from "react";
-import { Label, TextInput, Textarea, Button } from "flowbite-react";
+import { Label, TextInput, Textarea, Button, Modal } from "flowbite-react";
 import MenuModal from "../questions/newQuestion";
+import { Datepicker } from "flowbite-react";
 
 const QuizForm = () => {
   const [selectedComponents, setSelectedComponents] = useState<ReactNode[]>([]);
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
-  const [dueDate, setDueDate] = useState("");
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [componentToRemove, setComponentToRemove] = useState<number | null>(
+    null,
+  );
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    console.log("Título:", title);
-    console.log("Descripción:", description);
   };
 
   const addComponent = (component: ReactNode) => {
     setSelectedComponents((prevComponents) => [...prevComponents, component]);
   };
 
-  const removeComponent = (index: number) => {
-    setSelectedComponents((prevComponents) =>
-      prevComponents.filter((_, i) => i !== index),
-    );
+  const confirmRemoveComponent = () => {
+    if (componentToRemove !== null) {
+      setSelectedComponents((prevComponents) =>
+        prevComponents.filter((_, i) => i !== componentToRemove),
+      );
+      setComponentToRemove(null);
+    }
+    setIsModalOpen(false);
+  };
+
+  const openModal = (index: number) => {
+    setComponentToRemove(index);
+    setIsModalOpen(true);
   };
 
   return (
@@ -62,13 +73,7 @@ const QuizForm = () => {
             <div className="mb-2 block">
               <Label htmlFor="dueDate" value="Fecha de Entrega" />
             </div>
-            <TextInput
-              id="dueDate"
-              type="date"
-              required={true}
-              value={dueDate}
-              onChange={(e) => setDueDate(e.target.value)}
-            />
+            <Datepicker autoHide={false} />
           </div>
           <div>
             <div className="mb-2 block">
@@ -79,8 +84,6 @@ const QuizForm = () => {
               type="text"
               placeholder="Ingresa el Porcentaje del Quiz"
               required={true}
-              value={title}
-              onChange={(e) => setTitle(e.target.value)}
             />
             {selectedComponents.map((Component, index) => (
               <div
@@ -91,7 +94,7 @@ const QuizForm = () => {
                   color="red"
                   size="xs"
                   className="absolute right-2 top-2"
-                  onClick={() => removeComponent(index)}
+                  onClick={() => openModal(index)}
                 >
                   X
                 </Button>
@@ -103,6 +106,27 @@ const QuizForm = () => {
           <Button type="submit">Crear Quiz</Button>
         </form>
       </div>
+
+      <Modal show={isModalOpen} onClose={() => setIsModalOpen(false)}>
+        <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
+          <div className="rounded-lg bg-white p-6 shadow-lg">
+            <h3 className="text-gray-800 mb-4 text-base font-bold">
+              Confirmar Eliminación
+            </h3>
+            <p>¿Está seguro de que desea eliminar esta pregunta?</p>
+            <div className="flex justify-center pt-4">
+              <Button
+                className="mr-3"
+                color="gray"
+                onClick={() => setIsModalOpen(false)}
+              >
+                Cancelar
+              </Button>
+              <Button onClick={confirmRemoveComponent}>Eliminar</Button>
+            </div>
+          </div>
+        </div>
+      </Modal>
     </>
   );
 };

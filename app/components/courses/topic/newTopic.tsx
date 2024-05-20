@@ -40,16 +40,6 @@ const TopicForm = () => {
                 onChange={(e) => setTitle(e.target.value)}
               />
             </div>
-            <div>
-              <Label htmlFor="description" value="Descripción del tema" />
-              <Textarea
-                id="description"
-                placeholder="Ingresa la descripción del tema"
-                required={true}
-                value={description}
-                onChange={(e) => setDescription(e.target.value)}
-              />
-            </div>
             <Button type="submit">Crear tema</Button>
           </form>
         </Modal.Body>

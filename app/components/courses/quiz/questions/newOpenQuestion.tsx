@@ -12,7 +12,7 @@ const OpenQuestionForm = () => {
     <>
       <div className="">
         <div>
-          <h3 className="text-gray-800 mb-4 text-xl font-bold">
+          <h3 className="text-gray-800 mb-4 text-base font-bold">
             Pregunta Abierta
           </h3>
           <div className="mb-2 block">
@@ -21,17 +21,6 @@ const OpenQuestionForm = () => {
           <Textarea
             id="ask"
             placeholder="Escribe una Pregunta"
-            required={true}
-            rows={4}
-          />
-        </div>
-        <div>
-          <div className="mb-2 block">
-            <Label htmlFor="ask" value="Ingresa una Respuesta" />
-          </div>
-          <Textarea
-            id="ask"
-            placeholder="Escribe una Respuesta"
             required={true}
             rows={4}
           />

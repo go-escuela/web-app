@@ -1,4 +1,4 @@
-import EditQuiz from "@/app/components/quiz/edit/editQuiz";
+import EditQuiz from "@/app/components/courses/quiz/edit/editQuiz";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
