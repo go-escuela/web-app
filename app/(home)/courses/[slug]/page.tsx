@@ -4,9 +4,9 @@ import { Tabs } from "flowbite-react";
 import { HiAdjustments, HiUserCircle } from "react-icons/hi";
 import { MdDashboard } from "react-icons/md";
 import { customTabTheme } from "@/app/lib/custom/tabs";
-import { ActivityList } from "@/app/components/courses/list";
-import UsersList from "@/app/components/users/users";
-import StudentList from "@/app/components/users/studentStats";
+import { ActivityList } from "@/app/components/courses/ActivityList";
+import UsersList from "@/app/components/users/UsersList";
+import StudentStats from "@/app/components/users/StudentStats";
 
 export default function Page() {
   return (
@@ -19,13 +19,13 @@ export default function Page() {
           theme={customTabTheme}
         >
           <Tabs.Item active title="Actividades de clase" icon={HiUserCircle}>
-            <ActivityList />
+            <ActivityList/>
           </Tabs.Item>
           <Tabs.Item title="Personas" icon={MdDashboard}>
             <UsersList />
           </Tabs.Item>
           <Tabs.Item title="Calificaciones" icon={HiAdjustments}>
-            <StudentList />
+            <StudentStats />
           </Tabs.Item>
         </Tabs>
       </div>

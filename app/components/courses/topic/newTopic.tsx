@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Label, TextInput, Textarea, Button, Modal } from "flowbite-react";
 
-const TopicForm = () => {
+const NewTopic = () => {
   // Vars on form
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
@@ -48,4 +48,4 @@ const TopicForm = () => {
   );
 };
 
-export default TopicForm;
+export default NewTopic;

@@ -2,11 +2,11 @@ import { Table } from "flowbite-react";
 import React from "react";
 import { faker } from "@faker-js/faker";
 
-const StudentList = () => {
+const StudentStats = () => {
   const students = [
     {
       photo: faker.image.avatar(),
-      name: faker.name.fullName(),
+      name: faker.person.fullName(),
       id: "12345",
       email: "johndoe@example.com",
       grade: "A",
@@ -16,7 +16,7 @@ const StudentList = () => {
     },
     {
       photo: faker.image.avatar(),
-      name: faker.name.fullName(),
+      name: faker.person.fullName(),
       id: "67890",
       email: "janesmith@example.com",
       grade: "B",
@@ -26,7 +26,7 @@ const StudentList = () => {
     },
     {
       photo: faker.image.avatar(),
-      name: faker.name.fullName(),
+      name: faker.person.fullName(),
       id: "54321",
       email: "alicejohnson@example.com",
       grade: "A",
@@ -78,4 +78,4 @@ const StudentList = () => {
   );
 };
 
-export default StudentList;
+export default StudentStats;

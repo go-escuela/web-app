@@ -3,10 +3,7 @@
 import { Button } from "flowbite-react";
 import React, { useState } from "react";
 
-const ActivityView = () => {
-  const [title, setTitle] = useState("");
-  const [description, setDescription] = useState("");
-  const [fechaEntrega, setDueDate] = useState("");
+const Page = () => {
 
   const handleSubmit = (event: { preventDefault: () => void }) => {
     event.preventDefault();
@@ -20,9 +17,7 @@ const ActivityView = () => {
       </h1>
 
       <Button className="w-full place-content-center">Entrega Examen</Button>
-      {fechaEntrega}
     </>
   );
 };
 
-export default ActivityView;

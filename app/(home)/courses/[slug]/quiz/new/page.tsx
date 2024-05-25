@@ -1,4 +1,6 @@
-import QuizForm from "@/app/components/courses/quiz/create/newQuiz";
+"use client";
+
+import NewQuiz from "@/app/components/courses/quiz/NewQuiz";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -6,6 +8,6 @@ export const metadata: Metadata = {
   description: "",
 };
 
-export default function Task() {
-  return <QuizForm />;
+export default function Page() {
+  return <NewQuiz />;
 }

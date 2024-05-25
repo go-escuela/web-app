@@ -1,4 +1,4 @@
-import EditQuiz from "@/app/components/courses/quiz/edit/editQuiz";
+import EditQuiz from "@/app/components/courses/quiz/EditQuiz";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -6,6 +6,6 @@ export const metadata: Metadata = {
   description: "",
 };
 
-export default function Task() {
+export default function Page() {
   return <EditQuiz />;
 }
