@@ -10,16 +10,15 @@ import { List } from "flowbite-react";
 import Link from "next/link";
 import NewTopic from "./topic/NewTopic";
 import NewActivityOrQuizModal from "./NewActivityOrQuizModal";
-import { slugify } from "@/app/lib/utils"
+import { slugify } from "@/app/lib/utils";
 
 export function ActivityList() {
+  const currentUrl = `${window.location.pathname}`;
+  const urlSegments = currentUrl.toString().split("/");
+  const slug = urlSegments[urlSegments.length - 1];
 
-  function handleUrl () {
-    var url = location.href;
-    console.log("hola va el slug"+url)
-  }
   return (
-    <div className="mx-auto max-w-2xl" onLoad={handleUrl}>
+    <div className="mx-auto max-w-2xl">
       <div className="flex flex-wrap items-start gap-2">
         <NewTopic />
       </div>
@@ -37,12 +36,12 @@ export function ActivityList() {
             </div>
           </Accordion.Content>
         </Accordion.Panel>
-        <Accordion.Panel onClick={handleUrl}>
+        <Accordion.Panel>
           <Accordion.Title>Clase 1</Accordion.Title>
-          <Accordion.Content >
+          <Accordion.Content>
             <List unstyled className="divide-gray-200 dark:divide-gray-700">
               <List.Item className="border-b pb-3 sm:pb-4">
-                <Link className="text-xs" href={`quiz/view/${slugify("los seres vivos")}/`}>
+                <Link className="text-xs" href={`${slug}/activity/view/${slugify("los seres vivos")}/`}>
                   <div className="flex items-center space-x-4 rtl:space-x-reverse">
                     <BookmarkSquareIcon className="size-4 text-blue-500" />
                     <div className="min-w-0 flex-1">los seres vivos</div>
@@ -53,7 +52,7 @@ export function ActivityList() {
                 </Link>
               </List.Item>
               <List.Item className="border-b pb-3 sm:pb-4">
-                <Link className="text-xs" href="quiz/question">
+                <Link className="text-xs" href={`${slug}/quiz/view/${slugify("los seres vivos")}`}>
                   <div className="flex items-center space-x-4 rtl:space-x-reverse">
                     <QuestionMarkCircleIcon className="size-4 text-blue-500" />
                     <div className="min-w-0 flex-1">

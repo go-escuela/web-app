@@ -9,7 +9,7 @@ const ActivityView = () => {
 
   // Datos de ejemplo de la actividad
   const activity = {
-    title: "Actividad de Matemáticas",
+    title: "Actividad",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     dueDate: "2024-06-01", // Fecha en formato YYYY-MM-DD
   };
@@ -50,7 +50,7 @@ const ActivityView = () => {
           onClick={handleDelivery}
           disabled={isDelivered}
           className={`mt-4 rounded-lg px-4 py-2 text-white focus:outline-none focus:ring-2 focus:ring-opacity-50 ${
-            isDelivered ? "bg-gray-400 cursor-not-allowed" : "bg-blue-500 hover:bg-blue-700 focus:ring-blue-500"
+            isDelivered ? "bg-gray-400 cursor-not-allowed" : "bg-green-500 hover:bg-green-700 focus:ring-green-500"
           }`}
         >
           {isDelivered ? "Actividad Entregada" : "Entregar Actividad"}

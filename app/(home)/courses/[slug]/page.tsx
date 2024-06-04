@@ -1,4 +1,4 @@
-"use client";
+"use client"
 
 import { Tabs } from "flowbite-react";
 import { HiAdjustments, HiUserCircle } from "react-icons/hi";
@@ -7,8 +7,10 @@ import { customTabTheme } from "@/app/lib/custom/tabs";
 import { ActivityList } from "@/app/components/courses/ActivityList";
 import UsersList from "@/app/components/users/UsersList";
 import StudentStats from "@/app/components/users/StudentStats";
+import { useSearchParams } from 'next/navigation';
 
 export default function Page() {
+
   return (
     <div className="rounded-sm border border-stroke bg-white p-7.5 shadow-default dark:border-strokedark dark:bg-boxdark">
       <div className="mb-6 gap-5 border-stroke dark:border-strokedark sm:gap-10">

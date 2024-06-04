@@ -1,19 +1,25 @@
-import React, { useState } from "react";
+"use client";
+
+import { useState } from "react";
 import { Button, Modal } from "flowbite-react";
 import { FiEdit3, FiCheckSquare } from "react-icons/fi";
 import { HiOutlinePlusSm } from "react-icons/hi";
 
-const NewActivityOrQuizModal: React.FC = () => {
+
+const NewActivityOrQuizModal = () => {
   const [openModal, setOpenModal] = useState(false);
+  const currentUrl = `${window.location.pathname}`;
+  const urlSegments = currentUrl.split("/");
+  let slug = urlSegments[urlSegments.length - 1];
 
   // Define the type of option as a union of string literals
   const handleButtonClick = (option: "quiz" | "activity") => {
     setOpenModal(false);
     // Redirect to the corresponding page based on the selected option
     if (option === "quiz") {
-      window.location.href = "/quiz/new"; // Replace "/create-quiz" with the route to your quiz creation page
+      window.location.href = `/courses/${slug}/quiz/new`; // Replace "/create-quiz" with the route to your quiz creation page
     } else if (option === "activity") {
-      window.location.href = "/activity/new"; // Replace "/create-activity" with the route to your activity creation page
+      window.location.href = `/courses/${slug}/activity/new`; // Replace "/create-activity" with the route to your activity creation page
     }
   };
 
@@ -27,7 +33,7 @@ const NewActivityOrQuizModal: React.FC = () => {
         gradientDuoTone={"cyanToBlue"}
       >
         <HiOutlinePlusSm className="ml-2 h-5 w-5" />
-        Agregar Actividad o recurso
+        Add Activity or Resource
       </Button>
       <Modal
         show={openModal}
@@ -40,7 +46,7 @@ const NewActivityOrQuizModal: React.FC = () => {
       >
         <Modal.Header>
           <h3 className="text-gray-900 text-xl font-semibold">
-            Selecciona que quieres Crear
+            Select what you want to create
           </h3>
         </Modal.Header>
         <Modal.Body>
@@ -52,7 +58,7 @@ const NewActivityOrQuizModal: React.FC = () => {
               onClick={() => handleButtonClick("quiz")}
             >
               <FiEdit3 className="text-xl" />
-              Crear Quiz
+              Create Quiz
             </Button>
             {/* Button to create an activity */}
             <Button
@@ -61,7 +67,7 @@ const NewActivityOrQuizModal: React.FC = () => {
               onClick={() => handleButtonClick("activity")}
             >
               <FiCheckSquare className="text-xl" />
-              Crear Actividad
+              Create Activity
             </Button>
           </div>
         </Modal.Body>

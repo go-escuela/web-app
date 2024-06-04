@@ -1,5 +1,3 @@
-"use client";
-
 import NewQuiz from "@/app/components/courses/quiz/NewQuiz";
 import { Metadata } from "next";
 
