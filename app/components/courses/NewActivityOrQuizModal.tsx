@@ -33,7 +33,7 @@ const NewActivityOrQuizModal = () => {
         gradientDuoTone={"cyanToBlue"}
       >
         <HiOutlinePlusSm className="ml-2 h-5 w-5" />
-        Add Activity or Resource
+        Agrega Actividad o Recurso
       </Button>
       <Modal
         show={openModal}
@@ -46,7 +46,7 @@ const NewActivityOrQuizModal = () => {
       >
         <Modal.Header>
           <h3 className="text-gray-900 text-xl font-semibold">
-            Select what you want to create
+            Selecciona que quieres crear
           </h3>
         </Modal.Header>
         <Modal.Body>
@@ -58,7 +58,7 @@ const NewActivityOrQuizModal = () => {
               onClick={() => handleButtonClick("quiz")}
             >
               <FiEdit3 className="text-xl" />
-              Create Quiz
+              Crear Quiz
             </Button>
             {/* Button to create an activity */}
             <Button
@@ -67,7 +67,7 @@ const NewActivityOrQuizModal = () => {
               onClick={() => handleButtonClick("activity")}
             >
               <FiCheckSquare className="text-xl" />
-              Create Activity
+              Crear Actividad
             </Button>
           </div>
         </Modal.Body>
