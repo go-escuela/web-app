@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import { Accordion } from "flowbite-react";
 import { HiOutlinePlusSm } from "react-icons/hi";
 import {
@@ -8,14 +9,19 @@ import {
 } from "@heroicons/react/24/solid";
 import { List } from "flowbite-react";
 import Link from "next/link";
-import NewTopic from "./topic/NewTopic";
 import NewActivityOrQuizModal from "./NewActivityOrQuizModal";
 import { slugify } from "@/app/lib/utils";
+import NewTopic from "./topic/NewTopic";
 
 export function ActivityList() {
-  const currentUrl = `${window.location.pathname}`;
-  const urlSegments = currentUrl.toString().split("/");
-  const slug = urlSegments[urlSegments.length - 1];
+  const [slug, setSlug] = useState("");
+
+  useEffect(() => {
+    const currentUrl = `${window.location.pathname}`;
+    const urlSegments = currentUrl.toString().split("/");
+    const currentSlug = urlSegments[urlSegments.length - 1];
+    setSlug(currentSlug);
+  }, []);
 
   return (
     <div className="mx-auto max-w-2xl">
