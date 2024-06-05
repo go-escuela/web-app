@@ -1,12 +1,10 @@
 import React, { useState, ReactNode } from "react";
 import { Button, Modal } from "flowbite-react";
 import { FiEdit3, FiCheckSquare, FiRadio, FiAlertCircle } from "react-icons/fi";
-import NewOpenQuestion from "./newOpenQuestion";
-import NewMultipleChoiceQuestion from "./multipleChoiceQuestions/newMultipleChoiceQuestion";
-import NewBooleanQuestion from "./newBooleanQuestion";
-import NewSingleChoiceQuestion from "./uniqueChoiceQuestions/newSingleChoiceQuestion";
-
-
+import NewOpenQuestion from "./NewOpenQuestion";
+import NewMultipleChoiceQuestion from "./multipleChoiceQuestions/NewMultipleChoiceQuestion";
+import NewBooleanQuestion from "./NewBooleanQuestion";
+import NewSingleChoiceQuestion from "./uniqueChoiceQuestions/NewSingleChoiceQuestion";
 
 interface NewQuestionProps {
   addComponent: (component: ReactNode) => void;

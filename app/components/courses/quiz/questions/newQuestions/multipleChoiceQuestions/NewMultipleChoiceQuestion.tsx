@@ -2,9 +2,7 @@
 
 import React, { useState } from "react";
 import { Label, Textarea } from "flowbite-react";
-import NewMultipleChoice from "./newMultipleChoice";
-
-
+import NewMultipleChoice from "./NewMultipleChoice";
 
 const NewMultipleChoiceQuestion = () => {
   //Vars on form

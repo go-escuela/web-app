@@ -1,29 +1,16 @@
 "use client";
 
 import React, { useState } from "react";
-import { Button, FileInput } from "flowbite-react";
+import { Button } from "flowbite-react";
 
 const ActivityView = () => {
-  const [isDelivered, setIsDelivered] = useState(false);
-  const [selectedFile, setSelectedFile] = useState<File | null>(null);
+  const [isDelivered, _setIsDelivered] = useState(false);
 
   // Datos de ejemplo de la actividad
   const activity = {
     title: "Actividad",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     dueDate: "2024-06-01", // Fecha en formato YYYY-MM-DD
-  };
-
-  const handleDelivery = () => {
-    setIsDelivered(true);
-    // Aquí puedes agregar la lógica para marcar la actividad como entregada en el backend
-    console.log("Actividad entregada con el archivo:", selectedFile);
-  };
-
-  const handleFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    if (event.target.files) {
-      setSelectedFile(event.target.files[0]);
-    }
   };
 
   return (
@@ -41,11 +28,9 @@ const ActivityView = () => {
           <p className="mt-2 text-gray-600">{new Date(activity.dueDate).toLocaleDateString()}</p>
         </div>
         <Button
-          onClick={handleDelivery}
           disabled={isDelivered}
-          className={`mt-4 rounded-lg px-4 py-2 text-white focus:outline-none focus:ring-2 focus:ring-opacity-50 ${
-            isDelivered ? "bg-gray-400 cursor-not-allowed" : "bg-green-500 hover:bg-green-700 focus:ring-green-500"
-          }`}
+          className={`mt-4 rounded-lg px-4 py-2 text-white focus:outline-none focus:ring-2 focus:ring-opacity-50 ${isDelivered ? "bg-gray-400 cursor-not-allowed" : "bg-green-500 hover:bg-green-700 focus:ring-green-500"
+            }`}
         >
           {isDelivered ? "Actividad Entregada" : "Entregar Actividad"}
         </Button>

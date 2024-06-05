@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Label, Textarea } from "flowbite-react";
-import NewSingleChoice from "./newSingleChoice";
+import NewSingleChoice from "./NewSingleChoice";
 
 
 const NewSingleChoiceQuestion = () => {

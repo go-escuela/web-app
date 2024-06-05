@@ -16,7 +16,7 @@ const NewBooleanQuestion = () => {
       <div className="">
         <div>
           <h3 className="text-gray-800 mb-4 text-base font-bold">
-            Pregunta de Bolean
+            Pregunta Verdadero/falso
           </h3>
           <div className="mb-2 block">
             <Label htmlFor="ask" value="Ingresa una Pregunta" />
