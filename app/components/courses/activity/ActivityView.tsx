@@ -40,12 +40,6 @@ const ActivityView = () => {
           <h3 className="text-base font-medium text-gray-700">Fecha de Entrega</h3>
           <p className="mt-2 text-gray-600">{new Date(activity.dueDate).toLocaleDateString()}</p>
         </div>
-        <div>
-          <FileInput
-            onChange={handleFileChange}
-            className="mt-2"
-          />
-        </div>
         <Button
           onClick={handleDelivery}
           disabled={isDelivered}

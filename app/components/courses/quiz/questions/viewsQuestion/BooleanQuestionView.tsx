@@ -21,7 +21,7 @@ const BooleanQuestionView = () => {
   return (
     <div className="rounded-lg bg-white p-6 shadow-md">
       <h3 className="text-gray-800 mb-4 text-xl font-bold">
-        Pregunta de Bolean
+        Pregunta de verdadero/falso
       </h3>
       <div className="space-y-4">
         {options.map((option) => (

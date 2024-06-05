@@ -12,7 +12,7 @@ const OpenQuestionView = () => {
   return (
     <div className="rounded-lg bg-white p-6 shadow-md">
       <h3 className="text-gray-800 mb-4 text-xl font-bold">
-        Pregunta de Abierta, cuantos años tenia matusalen?
+        Pregunta abierta, cuantos años tenia matusalen?
       </h3>
       <TextInput type="text" id="disabledInput1" placeholder="Responde aqui" />
       <div className="space-y-4"></div>
