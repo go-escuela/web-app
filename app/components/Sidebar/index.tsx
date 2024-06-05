@@ -4,7 +4,10 @@ import React, { useEffect, useRef, useState } from "react";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
-import { AcademicCapIcon, AdjustmentsHorizontalIcon } from '@heroicons/react/24/solid'
+import {
+  AcademicCapIcon,
+  AdjustmentsHorizontalIcon,
+} from "@heroicons/react/24/solid";
 interface SidebarProps {
   sidebarOpen: boolean;
   setSidebarOpen: (arg: boolean) => void;
@@ -41,8 +44,9 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
   return (
     <aside
       ref={sidebar}
-      className={`absolute left-0 top-0 z-9999 flex h-screen flex-col overflow-y-hidden bg-black duration-300 ease-linear dark:bg-boxdark lg:static lg:translate-x-0 ${sidebarOpen ? "translate-x-0" : "-translate-x-full"
-        }`}
+      className={`absolute left-0 top-0 z-9999 flex h-screen flex-col overflow-y-hidden bg-black duration-300 ease-linear dark:bg-boxdark lg:static lg:translate-x-0 ${
+        sidebarOpen ? "translate-x-0" : "-translate-x-full"
+      }`}
     >
       {/* <!-- SIDEBAR HEADER --> */}
       <div className="">
@@ -90,9 +94,9 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
               <li>
                 <Link
                   href="/"
-                  className={`group relative flex items-center gap-2.5 rounded-sm px-4 py-2 font-medium text-bodydark1 duration-300 ease-in-out hover:bg-graydark dark:hover:bg-meta-4 ${pathname === "/" &&
-                    "bg-graydark dark:bg-meta-4"
-                    }`}
+                  className={`group relative flex items-center gap-2.5 rounded-sm px-4 py-2 font-medium text-bodydark1 duration-300 ease-in-out hover:bg-graydark dark:hover:bg-meta-4 ${
+                    pathname === "/" && "bg-graydark dark:bg-meta-4"
+                  }`}
                 >
                   <AcademicCapIcon className="size-6 text-blue-500" />
                   Pagina principal
@@ -104,9 +108,9 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
               <li>
                 <Link
                   href="/profile"
-                  className={`group relative flex items-center gap-2.5 rounded-sm px-4 py-2 font-medium text-bodydark1 duration-300 ease-in-out hover:bg-graydark dark:hover:bg-meta-4 ${pathname.includes("profile") &&
-                    "bg-graydark dark:bg-meta-4"
-                    }`}
+                  className={`group relative flex items-center gap-2.5 rounded-sm px-4 py-2 font-medium text-bodydark1 duration-300 ease-in-out hover:bg-graydark dark:hover:bg-meta-4 ${
+                    pathname.includes("profile") && "bg-graydark dark:bg-meta-4"
+                  }`}
                 >
                   <AdjustmentsHorizontalIcon className="size-6 text-blue-500" />
                   Mi Perfil

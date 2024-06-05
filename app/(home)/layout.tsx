@@ -3,11 +3,7 @@ import React, { useState, ReactNode } from "react";
 import Sidebar from "@/app/components/Sidebar";
 import Header from "@/app/components/Header";
 
-export default function Layout({
-  children,
-}: {
-  children: ReactNode;
-}) {
+export default function Layout({ children }: { children: ReactNode }) {
   const [sidebarOpen, setSidebarOpen] = useState(false);
   return (
     <>

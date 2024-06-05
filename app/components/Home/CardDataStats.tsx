@@ -1,16 +1,13 @@
 import React, { ReactNode } from "react";
 import Link from "next/link";
-import { slugify } from "@/app/lib/utils"
+import { slugify } from "@/app/lib/utils";
 
 interface CardDataStatsProps {
   title: string;
   children: ReactNode;
 }
 
-const CardDataStats: React.FC<CardDataStatsProps> = ({
-  title,
-  children,
-}) => {
+const CardDataStats: React.FC<CardDataStatsProps> = ({ title, children }) => {
   return (
     <Link href={`courses/${slugify(title)}`}>
       <div className="rounded-sm border border-stroke bg-white px-7.5 py-6 shadow-default dark:border-strokedark dark:bg-boxdark">
