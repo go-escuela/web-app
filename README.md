@@ -154,7 +154,8 @@ To maintain clean and efficient code in Next.js:
 - Always define types and interfaces.
 - Use `tsconfig.json` to configure the compiler.
 - Avoid using `any`.
-[More best practices] (https://docs.aws.amazon.com/prescriptive-guidance/latest/best-practices-cdk-typescript-iac/typescript-best-practices.html)
+  
+[More best practices](https://docs.aws.amazon.com/prescriptive-guidance/latest/best-practices-cdk-typescript-iac/typescript-best-practices.html)
 
  Installation Locally
 1. Clone the repository:
