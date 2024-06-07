@@ -1,5 +1,5 @@
 pull_request_template.md
-## Description
+## Description 
 
 [Brief description of the changes made in this pull request]
 
@@ -32,7 +32,7 @@ pull_request_template.md
 2. [Second step to test the changes]
 3. [Etc.]
 
-## Checklist
+## Checklist 
 
 - [ ] I have tested the changes locally
 - [ ] I have reviewed and formatted the code according to the established guidelines
