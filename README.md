@@ -24,7 +24,7 @@ Getting Started
 6. Delete the branch after merging:
    ```bash
    git branch -d branch-name
-   git push origin --delete branch-name
+   git push origin --delete branch-name 
    ```
 
  Naming Conventions
