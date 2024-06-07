@@ -2,7 +2,7 @@
 
 [Brief description of the changes made in this pull request]
 
-## Type of Changes
+## Type of Changes 
 
 - [ ] Bug fix
 - [ ] New feature
