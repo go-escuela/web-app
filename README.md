@@ -4,28 +4,24 @@ Getting Started
 
  Git Workflow
 1. Clone the repository:
-   ```bash
+ 
    git clone https://github.com/go-escuela/web-app.git
-   ```
+  
 2. Create a new branch:
-   ```bash
+   
    git checkout -b branch-name (feat, fix, performance, refactoring, documentation)
-   ```
+  
 3. Make changes and commit:
-   ```bash
+  
    git add -p
    git commit -m "Description of changes"
-   ```
+  
 4. Push changes:
-   ```bash
+  
    git push origin branch-name
-   ```
+  
 5. Create a Pull Request on GitHub.
-6. Delete the branch after merging:
-   ```bash
-   git branch -d branch-name
-   git push origin --delete branch-name
-   ```
+  
 
  Naming Conventions
  When to Use Each Naming Style
@@ -49,21 +45,21 @@ Located in the `app/(home)` directory:
 - `/courses/[slug]/quiz/new`: New quiz creation page
   - Description: Allows users to create a new quiz for a specific course.
   - File: `app/(home)/courses/[slug]/quiz/new/page.tsx`
-- `/courses/[slug]/quiz/[quizSlug]/edit`: Edit quiz page
+- `/courses/[slug]/quiz/edit`: Edit quiz page
   - Description: Allows users to edit an existing quiz.
-  - File: `app/(home)/courses/[slug]/quiz/[quizSlug]/edit/page.tsx`
-- `/courses/[slug]/quiz/[quizSlug]`: Quiz detail page
+  - File: `app/(home)/courses/[slug]/quiz/edit/page.tsx`
+- `/courses/[slug]/quiz/[quiz-slug]`: Quiz detail page
   - Description: Displays the details of a specific quiz.
-  - File: `app/(home)/courses/[slug]/quiz/[quizSlug]/page.tsx`
+  - File: `app/(home)/courses/[slug]/quiz/[quiz-slug]/page.tsx`
 - `/courses/[slug]/activity/new`: New activity creation page
   - Description: Allows users to create a new activity for a specific course.
   - File: `app/(home)/courses/[slug]/activity/new/page.tsx`
-- `/courses/[slug]/activity/[activitySlug]/edit`: Edit activity page
+- `/courses/[slug]/activity/edit`: Edit activity page
   - Description: Allows users to edit an existing activity.
-  - File: `app/(home)/courses/[slug]/activity/[activitySlug]/edit/page.tsx`
-- `/courses/[slug]/activity/[activitySlug]`: Activity detail page
+  - File: `app/(home)/courses/[slug]/activity/edit/page.tsx`
+- `/courses/[slug]/activity/[activity-slug]`: Activity detail page
   - Description: Displays the details of a specific activity.
-  - File: `app/(home)/courses/[slug]/activity/[activitySlug]/page.tsx`
+  - File: `app/(home)/courses/[slug]/activity/[activity-slug]/page.tsx`
 - `/profile`: Profile
   - Description: The main profile page of the application.
   - File: `app/(home)/profile/page.tsx`
@@ -159,35 +155,35 @@ To maintain clean and efficient code in Next.js:
 
  Installation Locally
 1. Clone the repository:
-   ```bash
+  bash
    git clone https://github.com/go-escuela/web-app.git
-   ```
+  
 2. Install dependencies:
-   ```bash
+  bash
    cd web-app
    npm install
-   ```
+  
 3. Run the development server:
-   ```bash
+  bash
    npm run dev
-   ```
+  
    Access at `http://localhost:3000`.
 
  Lint Commit Messages
 Use [commitlint](https://commitlint.js.org/) to ensure commit messages follow a proper format:
 - Install commitlint:
-  ```bash
+ bash
   npm install --save-dev @commitlint/{config-conventional,cli}
-  ```
+ 
 - Create a configuration file `commitlint.config.js`:
-  ```javascript
+ javascript
   module.exports = {extends: ['@commitlint/config-conventional']};
-  ```
+ 
 - Integrate with Husky:
-  ```bash
+ bash
   npx husky install
   npx husky add .husky/commit-msg 'npx --no-install commitlint --edit "$1"'
-  ```
+ 
 To learn more about Next.js, take a look at the following resources:
 
 Next.js Documentation - learn about Next.js features and API.
