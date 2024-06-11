@@ -1,6 +1,6 @@
 This is a Next.js project bootstrapped with create-next-app.
 
-Getting Started
+##Getting Started
 
  Git Workflow
 1. Clone the repository:
@@ -23,7 +23,7 @@ Getting Started
 5. Create a Pull Request on GitHub.
   
 
- Naming Conventions
+##Naming Conventions
  When to Use Each Naming Style
 - PascalCase: Used for defining and exporting React components and classes.
   - Example: `UserProfile.tsx`, `UserSettingsModule.ts`.
@@ -34,7 +34,7 @@ Getting Started
 - snake_case: Used for filenames and constants to maintain consistency in configuration files.
   - Example: `config_file.ts`, `API_BASE_URL`.
 
- Project Routes
+##Project Routes
 Located in the `app/(home)` directory:
 - `/`: Main home page
   - Description: The main landing page of the application.
@@ -67,63 +67,63 @@ Located in the `app/(home)` directory:
   - Description: The Log-in a profile in the application.
   - File: `app/login/layout.tsx`
 
-Modules and Components
+##Modules and Components
 
-Components
+##Components
 
 Breadcrumbs
 - Component: Breadcrumb
 - Route: components/Breadcrumbs/Breadcrumb.tsx
 - Functionality: Displays the current navigation path for the user.
 
-Header
+##Header
 - Components: DropdownUser, Header
 - Route: components/Header/DropdownUser.tsx
 - Functionality: Displays a dropdown menu with user options like profile and settings.
 
-Home
+##Home
 - Components: CardDataStats
 - Route: components/Home/CardDataStats.tsx
 - Functionality: Displays statistics and relevant data in card format on the home page.
 
-Sidebar
+##Sidebar
 - Components: index
 - Route: components/Sidebar/index.tsx
 - Functionality: Displays a sidebar menu with navigation links and options.
 
-Tables
+##Tables
 - Components: TableThree
 - Route: components/Tables/TableThree.tsx
 - Functionality: Component to display data in table format.
 
-Loader (Common)
+##Loader (Common)
 - Components: index
 - Route: components/common/Loader/index.tsx
 - Functionality: Displays a loading indicator while processing a request or action.
 
-Courses
+##Courses
 
-Activity List
+##Activity List
 - Components: ActivityList
 - Route: components/courses/ActivityList.tsx
 - Functionality: Displays a list of activities related to a course.
 
-New Activity or Quiz Modal
+##New Activity or Quiz Modal
 - Components: NewActivityOrQuizModal
 - Route: components/courses/NewActivityOrQuizModal.tsx
 - Functionality: Modal to create new activities or quizzes related to a course.
 
-Activity
+##Activity
 - Components: ActivityView, EditActivity, NewActivity
 - Route: components/courses/activity/
 - Functionality: Detailed view, editing, and creation of activities.
 
-Quiz
+##Quiz
 - Components: EditQuiz, NewQuiz, QuizView
 - Route: components/courses/quiz/
 - Functionality: Editing, creation, and detailed view of quizzes.
 
-Questions
+##Questions
 - Components: 
   - NewBooleanQuestion, NewOpenQuestion, NewQuestion,
   - NewMultipleChoice, NewMultipleChoiceQuestion,
@@ -133,12 +133,12 @@ Questions
 - Route: components/courses/quiz/questions/
 - Functionality: Creation and detailed view of different types of questions.
 
-Topic
+##Topic
 - Components: NewTopic
 - Route: components/courses/topic/
 - Functionality: Form to create a new topic related to a course.
 
- Next.js Best Practices
+##Next.js Best Practices
 To maintain clean and efficient code in Next.js:
 - Use SSR or SSG as needed.
 - Keep routes organized.
@@ -146,14 +146,14 @@ To maintain clean and efficient code in Next.js:
 
 [More best practices](https://rohandalvii.medium.com/next-js-best-practices-tips-for-clean-and-efficient-code-99dd31a14797).
 
- TypeScript Best Practices
+##TypeScript Best Practices
 - Always define types and interfaces.
 - Use `tsconfig.json` to configure the compiler.
 - Avoid using `any`.
   
 [More best practices](https://docs.aws.amazon.com/prescriptive-guidance/latest/best-practices-cdk-typescript-iac/typescript-best-practices.html)
 
- Installation Locally
+##Installation Locally
 1. Clone the repository:
   bash
    git clone https://github.com/go-escuela/web-app.git
@@ -169,7 +169,7 @@ To maintain clean and efficient code in Next.js:
   
    Access at `http://localhost:3000`.
 
- Lint Commit Messages
+##Lint Commit Messages
 Use [commitlint](https://commitlint.js.org/) to ensure commit messages follow a proper format:
 - Install commitlint:
  bash
@@ -186,11 +186,11 @@ Use [commitlint](https://commitlint.js.org/) to ensure commit messages follow a 
  
 To learn more about Next.js, take a look at the following resources:
 
-Next.js Documentation - learn about Next.js features and API.
+##Next.js Documentation - learn about Next.js features and API.
 Learn Next.js - an interactive Next.js tutorial.
 You can check out the Next.js GitHub repository - your feedback and contributions are welcome!
 
-Deploy on Vercel
+##Deploy on Vercel
 The easiest way to deploy your Next.js app is to use the Vercel Platform from the creators of Next.js.
 
 Check out our Next.js deployment documentation for more details.
