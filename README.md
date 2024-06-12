@@ -2,7 +2,7 @@
 
 ## Description
 
-This is a Next.js project bootstrapped with create-next-app. It provides a file structure and components ready to develop a modern and scalable web application.
+This project is a Learning Management System (LMS) designed to facilitate online learning and course management. It provides educators with tools to create and manage courses, activities, and quizzes, while offering students a platform to enroll in courses and access learning materials. Built with Next.js, React.js, and Tailwind CSS, this LMS features a responsive UI and custom components for an enhanced user experience.
 
 ## Content Table
 
