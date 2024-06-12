@@ -10,7 +10,7 @@ This is a Next.js project bootstrapped with create-next-app. It provides a file 
 * [Naming Conventions](#naming-conventions)
 * [Proyect Routes](#project-routes)
 * [Project Structure](#project-structure)
-* [Components](#components)
+* [Folders](#folders)
 * [Next Best Practices](#next-best-practices)
 * [Typescript Best Practices](#typescript-best-practices)
 * [Git Workflow](#git-workflow)
@@ -200,74 +200,48 @@ Located in the `app/(home)` directory:
 
 44 directories, 70 files
 
-## Components
+## Folders
 
-Breadcrumbs
-- Component: Breadcrumb
-- Route: components/Breadcrumbs/Breadcrumb.tsx
-- Functionality: Displays the current navigation path for the user.
-
-##Header
-- Components: DropdownUser, Header
-- Route: components/Header/DropdownUser.tsx
-- Functionality: Displays a dropdown menu with user options like profile and settings.
-
-##Home
-- Components: CardDataStats
-- Route: components/Home/CardDataStats.tsx
-- Functionality: Displays statistics and relevant data in card format on the home page.
-
-##Sidebar
-- Components: index
-- Route: components/Sidebar/index.tsx
-- Functionality: Displays a sidebar menu with navigation links and options.
-
-##Tables
-- Components: TableThree
-- Route: components/Tables/TableThree.tsx
-- Functionality: Component to display data in table format.
-
-##Loader (Common)
-- Components: index
-- Route: components/common/Loader/index.tsx
-- Functionality: Displays a loading indicator while processing a request or action.
-
-##Courses
-
-##Activity List
-- Components: ActivityList
-- Route: components/courses/ActivityList.tsx
-- Functionality: Displays a list of activities related to a course.
-
-##New Activity or Quiz Modal
-- Components: NewActivityOrQuizModal
-- Route: components/courses/NewActivityOrQuizModal.tsx
-- Functionality: Modal to create new activities or quizzes related to a course.
-
-##Activity
-- Components: ActivityView, EditActivity, NewActivity
-- Route: components/courses/activity/
-- Functionality: Detailed view, editing, and creation of activities.
-
-##Quiz
-- Components: EditQuiz, NewQuiz, QuizView
-- Route: components/courses/quiz/
-- Functionality: Editing, creation, and detailed view of quizzes.
-
-##Questions
-- Components: 
-  - NewBooleanQuestion, NewOpenQuestion, NewQuestion,
-  - NewMultipleChoice, NewMultipleChoiceQuestion,
-  - NewSingleChoice, NewSingleChoiceQuestion,
-  - BooleanQuestionView, MultipleChoiceQuestionView,
-  - OpenQuestionView, SingleChoiceQuestionView
-- Route: components/courses/quiz/questions/
-- Functionality: Creation and detailed view of different types of questions.
-
-##Topic
-- Components: NewTopic
-- Route: components/courses/topic/
-- Functionality: Form to create a new topic related to a course.
+**(home)**: This folder cntrole the url pages, layouts, and components related to the home section of the application.
+**courses**: This folder contains the code for handling courses.
+**[slug]**: This folder likely contains the pages and components for individual course pages, with dynamic slugs (URL segments) representing each course.
+**activity**: This folder contains the components and pages related to course activities.
+**edit**: This folder contains the page for editing an activity.
+**new**: This folder contains the page for creating a new activity.
+**view**: This folder contains the page for viewing an activity.
+**quiz**: This folder contains the components and pages related to course quizzes.
+**edit**: This folder contains the page for editing a quiz.
+**new**: This folder contains the page for creating a new quiz.
+**view**: This folder contains the page for viewing a quiz.
+**topic**: This folder contains the page(s) related to course topics.
+**profile**: This folder contains the page(s) for the user profile section.
+**components**: This folder contains reusable UI components used throughout the application.
+**Breadcrumbs**: This folder contains the component(s) for displaying breadcrumbs (navigational aid).
+**Header**: This folder contains the component(s) for the header section of the application.
+**Home**: This folder contains the component(s) for the home section of the application.
+**Sidebar**: This folder contains the component(s) for the sidebar section of the application.
+**Tables**: This folder contains the component(s) for displaying data in a tabular format.
+**common**: This folder contains common or shared components.
+**Loader**: This folder contains the component(s) for displaying loading indicators.
+**courses**: This folder contains components specific to the courses section of the application.
+**activity**: This folder contains components related to course activities.
+**quiz**: This folder contains components related to course quizzes.
+**questions**: This folder contains components for handling different types of questions.
+**newQuestions**: This folder contains components for creating new questions.
+**multipleChoiceQuestions**: This folder contains components for multiple-choice questions.
+**uniqueChoiceQuestions**: This folder contains components for single-choice questions.
+**viewsQuestion**: This folder contains components for displaying questions.
+**topic**: This folder contains components related to course topics.
+**users**: This folder contains components related to user management and profiles.
+**css**: This folder likely contains global CSS styles for the application.
+**lib**: This folder contains utility functions, helper classes, or modules used across the application.
+**custom**: This folder contains custom utilities or libraries.
+**types**: This folder contains TypeScript type definitions and interfaces.
+**login**: This folder contains the page(s) for the login section of the application.
+**public**: This folder contains static assets like images that are served directly by the Next.js server.
+**images**: This folder contains the image assets used in the application.
+**courses**: This folder contains images related to courses.
+**logo**: This folder contains logo images used in the application.
 
 ## Next Best Practices
 To maintain clean and efficient code in Next.js:
